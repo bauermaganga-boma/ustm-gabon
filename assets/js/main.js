@@ -51,7 +51,7 @@ function renderChrome() {
     <div class="tb-r"><a href="espace.html?role=etudiant">${ICONS.cap}Espace étudiant</a><a href="espace.html?role=enseignant">${ICONS.lock}Espace enseignant</a></div>
   </div></div>
   <header class="header"><div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/img/logo-ustm.svg" alt="Logo USTM"><span><b>Université des Sciences<br>et Techniques de Masuku</b><small>Franceville · Depuis 1986</small></span></a>
+    <a class="brand" href="index.html"><img src="assets/img/logo-ustm.png" alt="Logo USTM"><span><b>Université des Sciences<br>et Techniques de Masuku</b><small>Franceville · Depuis 1986</small></span></a>
     <nav class="nav" id="nav">${navHtml}<a class="btn btn-orange" href="admission.html#preinscription">Pré-inscription</a></nav>
     <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div></header>`;
@@ -60,7 +60,7 @@ function renderChrome() {
   if (f) f.outerHTML = `
   <footer class="footer"><div class="wrap"><div class="grid">
     <div>
-      <a class="logo-w" href="index.html"><img src="assets/img/logo-ustm.svg" alt="USTM"></a>
+      <a class="logo-w" href="index.html"><img src="assets/img/logo-ustm.png" alt="USTM"></a>
       <p>${ESM.nom} — université publique scientifique et technique du Gabon, créée en 1986 à Franceville. <em>« ${ESM.slogan} »</em></p>
       <div class="socials">
         <a href="${ESM.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICONS.fb}</a>

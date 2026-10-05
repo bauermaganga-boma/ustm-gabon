@@ -39,7 +39,7 @@ const P = (() => {
     NAV = nav; VIEWS = views;
     const sb = document.getElementById("sb");
     const draw = () => {
-      sb.innerHTML = `<div class="sb-brand"><img src="assets/img/logo-ustm.svg" alt=""><span><b>USTM</b><small>${sub}</small></span></div>` +
+      sb.innerHTML = `<div class="sb-brand"><img src="assets/img/logo-ustm.png" alt=""><span><b>USTM</b><small>${sub}</small></span></div>` +
         NAV.map(n => { const b = n.badge ? n.badge() : 0; return `<a href="#${n.id}" data-v="${n.id}" class="${n.id === cur ? "on" : ""}">${ICONS[n.ic]}${n.l}${b ? `<span class="pill">${b}</span>` : ""}</a>`; }).join("") +
         `<div class="sb-foot"><a href="index.html">${ICONS.home}Retour au site</a><button class="lnk" id="logout">${ICONS.out}Déconnexion</button></div>`;
       document.getElementById("logout").onclick = async () => { await Store.logout(); location.href = "espace.html?role=" + me.role; };
@@ -514,7 +514,7 @@ const P = (() => {
         const rows = Store.notesEtudiant(me.id), mg = Store.moyenneGenerale(me.id), rg = Store.rang(me.id);
         const y = new Date().getMonth() >= 8 ? new Date().getFullYear() : new Date().getFullYear() - 1;
         el.innerHTML = `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;border-bottom:3px solid var(--orange);padding-bottom:1rem;margin-bottom:1.2rem;flex-wrap:wrap">
-            <div style="display:flex;gap:1rem;align-items:center"><img src="assets/img/logo-ustm.svg" alt="" style="height:70px"><div><b style="font-family:var(--font-h);color:var(--navy);font-size:1.1rem">UNIVERSITÉ DE MASUKU</b><br><small style="color:var(--muted)">${ESM.adresse}</small></div></div>
+            <div style="display:flex;gap:1rem;align-items:center"><img src="assets/img/logo-ustm.png" alt="" style="height:70px"><div><b style="font-family:var(--font-h);color:var(--navy);font-size:1.1rem">UNIVERSITÉ DE MASUKU</b><br><small style="color:var(--muted)">${ESM.adresse}</small></div></div>
             <div style="text-align:right"><b style="color:var(--navy)">BULLETIN DE NOTES</b><br><small>Année académique ${y} – ${y + 1}</small></div></div>
           <p><b>Étudiant(e) :</b> ${esc(me.nom.toUpperCase())} ${esc(me.prenom)} &nbsp;·&nbsp; <b>Matricule :</b> ${esc(me.matricule || me.login)}<br><b>Classe :</b> ${esc(cl().nom)}</p>
           <div style="margin:1.2rem 0">${notesTable(rows)}</div>
